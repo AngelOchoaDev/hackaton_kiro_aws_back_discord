@@ -5,6 +5,8 @@ dotenv.config();
 const {
 
   enviroment,
+  serverMONIT,
+  channelMONIT,
 
   clientIDDEV,
   tokenDEV,
@@ -18,16 +20,20 @@ const {
 
 const configPROD : Config = {
   enviroment : enviroment!,
+  serverMONIT : serverMONIT!,
+  channelMONIT : channelMONIT!,
   clientID : clientIDPROD!,
   token : tokenPROD!,
-  serverID : serverIDDEV!
+  serverID : serverIDPROD!
 };
 
 const configDESA : Config = {
   enviroment : enviroment!,
+  serverMONIT : serverMONIT!,
+  channelMONIT : channelMONIT!,
   clientID : clientIDDEV!,
   token : tokenDEV!,
-  serverID : serverIDPROD!
+  serverID : serverIDDEV!
 };
 
 let config = enviroment === 'PROD' ? configPROD : configDESA;
