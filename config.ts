@@ -8,22 +8,26 @@ const {
 
   clientIDDEV,
   tokenDEV,
+  serverIDDEV,
 
   clientIDPROD,
-  tokenPROD
+  tokenPROD,
+  serverIDPROD
 
 } = process.env;
 
 const configPROD : Config = {
   enviroment : enviroment!,
   clientID : clientIDPROD!,
-  token : tokenPROD!
+  token : tokenPROD!,
+  serverID : serverIDDEV!
 };
 
 const configDESA : Config = {
   enviroment : enviroment!,
   clientID : clientIDDEV!,
-  token : tokenDEV!
+  token : tokenDEV!,
+  serverID : serverIDPROD!
 };
 
 let config = enviroment === 'PROD' ? configPROD : configDESA;

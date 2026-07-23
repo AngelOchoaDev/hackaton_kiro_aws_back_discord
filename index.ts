@@ -30,7 +30,7 @@ const client = new Client({
 
 client.once(Events.ClientReady, ( event : Client<boolean> ) => {
 
-  client.user?.setActivity("retrasados", { type: ActivityType.Watching } );
+  client.user?.setActivity("gente maravillosa", { type: ActivityType.Watching } );
 
   console.log(`Listo! Loggeado como ${ event.user?.tag } en ambiente ${ config.enviroment }`);
 
